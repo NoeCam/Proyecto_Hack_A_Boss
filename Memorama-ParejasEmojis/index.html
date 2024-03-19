@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href="imgs/icono-m.png">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="imgs/icono-m.png" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Memorama Card Game</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <h1>
-            <ul>
-                <li>M</li>
-                <li>e</li>
-                <li>m</li>
-                <li>o</li>
-                <li>r</li>
-                <li>a</li>
-                <li>m</li>
-                <li>a</li>
-            </ul>
-        </h1>
+      <h1>
+        <ul>
+          <li>M</li>
+          <li>e</li>
+          <li>m</li>
+          <li>o</li>
+          <li>r</li>
+          <li>a</li>
+          <li>m</li>
+          <li>a</li>
+        </ul>
+      </h1>
     </header>
 
     <!-- <p class="totalPlays">Número de jugadas: 0</p> -->
@@ -31,62 +30,53 @@
     </button> -->
 
     <main>
+      <section class="gameContainer">
+        <p class="plays">Jugadas</p>
+        <p class="totalPlays">0</p>
 
-        <section class="gameContainer">
-
-            <p class="plays">Jugadas</p>
-            <p class="totalPlays">0</p>
-            
-            <!-- <button class="playAgain">
+        <!-- <button class="playAgain">
                 <span>Jugar de nuevo</span>
             </button> -->
 
-            <p class="points">Puntos</p>
-            <p class="totalPoints">0</p>
+        <p class="points">Puntos</p>
+        <p class="totalPoints">0</p>
 
-            <p class="time">Tiempo</p>
-            <p class="totalTime">00:00</p>
+        <p class="time">Tiempo</p>
+        <p class="totalTime">00:00</p>
 
-            <div class="game">
-
-                <!-- <div class="card">
+        <div class="game">
+          <!-- <div class="card">
                     <div class="cardBack">Back</div>
                     <div class="cardFront">Face</div>
                 </div> -->
+        </div>
 
-            </div>
+        <button class="resetGame">
+          <span>Reset</span>
+        </button>
 
-            <button class="resetGame">
-                <span>Reset</span>
-            </button>
-    
-            <!-- <button class="playAgain">
+        <!-- <button class="playAgain">
                 <span>Otra vez!</span>
             </button> -->
+      </section>
 
-        </section>
+      <section class="winData">
+        <p class="winTotalPlays">Jugadas totales: 0</p>
+        <p class="totalPlaysEmoji">?</p>
+        <p class="winTotalTime">Tiempo total: 00:00</p>
+        <p class="totalTimeEmoji">?</p>
+        <p class="winTotalPoints">Puntos obtenidos: 0</p>
 
-        <section class="winData">
-
-            <p class="winTotalPlays">Jugadas totales: 0</p>
-            <p class="totalPlaysEmoji">?</p>
-            <p class="winTotalTime">Tiempo total: 00:00</p>
-            <p class="totalTimeEmoji">?</p>
-            <p class="winTotalPoints">Puntos obtenidos: 0</p>
-
-            <button class="playAgain">
-                <span>Jugar de nuevo</span>
-            </button>
-
-        </section>
-
+        <button class="playAgain">
+          <span>Jugar de nuevo</span>
+        </button>
+      </section>
     </main>
 
     <footer>
-        <p style="color: white; font-size: 1rem">Footer</p>
+      <p style="color: white; font-size: 1rem">Footer</p>
     </footer>
 
     <script src="main.js"></script>
-
-</body>
+  </body>
 </html>
