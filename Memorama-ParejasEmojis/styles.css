@@ -97,7 +97,7 @@ main {
     background-color: transparent; /* rgb(50, 50, 50) */
     /* background: linear-gradient(to right, rgb(22, 22, 22), rgb(180, 180, 180)); */
     display: grid;
-    grid-template-columns: 5px 1fr 10px repeat(3, 1fr);
+    grid-template-columns: 0.25rem 10rem 0.25rem 1fr;
     grid-template-rows: repeat(9, 1fr);
     justify-content: center;
     align-items: center;
@@ -282,4 +282,16 @@ button > span {
 
 footer {
     height: 10vh;
+}
+
+/*MediaQuery*/
+@media screen and (min-width: 1000px) {
+    .gameContainer {
+        width: 80vw;
+        grid-template-columns: 0.5rem 15rem 0.5rem 1fr;
+    }
+
+    p{
+        font-size: 24px;
+    }
 }
