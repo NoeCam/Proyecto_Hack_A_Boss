@@ -6,11 +6,6 @@
 
 html {
     font-size: 62.5%;
-    /* background-image: url('imgs/stars-clouds.webp');
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* TODO => mantener el fondo en el mismo punto para más responsividad */
-    /* background-position: center; */
 }
 
 body {
@@ -22,7 +17,7 @@ body {
 /*? TÍTULO */
 h1 {
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
     display: flex;
@@ -274,9 +269,26 @@ button > span {
     grid-area: 10 / 1 / 11 / 2;
 }
 
-/* .playAgain {
-    grid-area: 8 / 1 / 9 / 2;
-} */
+.animacion-letras {
+    animation: moverLetra 0.4s ease forwards;
+    opacity: 0;
+    letter-spacing: 8px;
+   margin-top: 1.5rem;
+    
+}
+
+@keyframes moverLetra {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 
 /*? FOOTER */
 

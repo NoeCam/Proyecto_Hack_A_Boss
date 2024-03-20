@@ -348,4 +348,44 @@ function recolectData() {
   }`;
 }
 
+//! ANIMACIÓN TÍTULO:
+
+const h1Element = document.querySelector(".animacion-entrada");
+let frase = h1Element.textContent;
+let palabras = frase.split(' '); 
+let letrasIndividuales = [];
+
+
+palabras.forEach((palabra, index) => {
+    
+    for (let i = 0; i < palabra.length; i++) {
+        letrasIndividuales.push(palabra[i]);
+    }
+    
+    if (index < palabras.length -1) {
+        letrasIndividuales.push(' ');
+    }
+});
+
+let nuevoArray = [];
+
+function animacionLetras() {
+    h1Element.textContent = ''; 
+    letrasIndividuales.forEach((caracter, index) => {
+        const newSpan = document.createElement('span');
+        if (caracter !== ' ') {
+            newSpan.textContent = caracter;
+            newSpan.classList.add('animacion-letras');
+            newSpan.style.animationDelay = `${index * 0.3}s`; 
+            nuevoArray.push(newSpan);
+            h1Element.appendChild(newSpan);
+        } else {
+            
+            const spaceSpan = document.createTextNode(' ');
+            h1Element.appendChild(spaceSpan);
+        }
+    });
+}
+animacionLetras();
 printCards();
+
