@@ -75,7 +75,7 @@ const totalTime = document.querySelector(".totalTime");
 const playAgainButton = document.querySelector(".playAgain");
 const resetGameButton = document.querySelector(".resetGame");
 const winData = document.querySelector(".winData");
-const newCardTemplate = `<div class="card"><div class="cardBack">?</div><div class="cardFront"></div></div>`;
+const newCardTemplate = `<div class="card"><div class="cardBack"><img src="imgs/imageGris.png" alt="dorso de cartas con emojis"></div><div class="cardFront"></div></div>`;
 const gameContainer = document.querySelector('.gameContainer');
 const title1 = document.querySelector('.title1');
 const title2 = document.querySelector('.title2');
