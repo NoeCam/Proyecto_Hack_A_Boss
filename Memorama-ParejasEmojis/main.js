@@ -76,6 +76,10 @@ const playAgainButton = document.querySelector(".playAgain");
 const resetGameButton = document.querySelector(".resetGame");
 const winData = document.querySelector(".winData");
 const newCardTemplate = `<div class="card"><div class="cardBack">?</div><div class="cardFront"></div></div>`;
+const gameContainer = document.querySelector('.gameContainer');
+const title1 = document.querySelector('.title1');
+const title2 = document.querySelector('.title2');
+const title3 = document.querySelector('.title3');
 
 //! función general para la creación de cartas con sus eventos
 //! lógica para tener 2 cartas con el mismo valor
@@ -317,11 +321,12 @@ function pointsInRealTime(playResult) {
     }
   }
 
-  if (totalPoints < 0) {
-    totalPoints = 0;
-  }
+  if (pointsCounter <= 0){
+    pointsCounter = 0;
+}
+totalPoints.innerHTML = `${pointsCounter}`;
 
-  totalPoints.innerHTML = `${pointsCounter}`;
+  
 }
 
 function recolectData() {
@@ -350,42 +355,33 @@ function recolectData() {
 
 //! ANIMACIÓN TÍTULO:
 
-const h1Element = document.querySelector(".animacion-entrada");
-let frase = h1Element.textContent;
-let palabras = frase.split(' '); 
-let letrasIndividuales = [];
 
-
-palabras.forEach((palabra, index) => {
-    
-    for (let i = 0; i < palabra.length; i++) {
-        letrasIndividuales.push(palabra[i]);
-    }
-    
-    if (index < palabras.length -1) {
-        letrasIndividuales.push(' ');
-    }
-});
-
-let nuevoArray = [];
-
-function animacionLetras() {
-    h1Element.textContent = ''; 
-    letrasIndividuales.forEach((caracter, index) => {
-        const newSpan = document.createElement('span');
-        if (caracter !== ' ') {
-            newSpan.textContent = caracter;
-            newSpan.classList.add('animacion-letras');
-            newSpan.style.animationDelay = `${index * 0.3}s`; 
-            nuevoArray.push(newSpan);
-            h1Element.appendChild(newSpan);
-        } else {
-            
-            const spaceSpan = document.createTextNode(' ');
-            h1Element.appendChild(spaceSpan);
-        }
-    });
-}
-animacionLetras();
-printCards();
+function animatedTitle(){
+  const titleArray = Array.from(title1.innerHTML + title2.innerHTML + title3.innerHTML);
+  const newTitle = [];
+  title1.innerHTML= '';
+  title2.innerHTML= '';
+  title3.innerHTML= '';
+  titleArray.forEach((letter, index) => {
+      const titleTemplate = `<div class="letter l${index}">${letter}</div>`;
+      const titleSpan = document.createElement('div');
+      titleSpan.innerHTML = titleTemplate;
+      newTitle.push(titleSpan);
+      if (index <= 6){
+          title1.append(newTitle[index]);
+      } else if (index > 6 && index <= 8){
+          title2.append(newTitle[index]);
+      } else {
+          title3.append(newTitle[index]);
+      };
+  });
+};
+animatedTitle();
+gameContainer.style.opacity = 0;
+winData.style.opacity = 0;
+setTimeout(() => {
+  gameContainer.style.opacity = 1;
+  printCards()
+  winData.style.opacity = 1;
+}, 2000)
 

@@ -6,43 +6,266 @@
 
 html {
     font-size: 62.5%;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 
 body {
     /* background-color: rgb(110, 110, 110); */
     background: linear-gradient(to bottom right, rgb(22, 22, 22), rgb(92, 85, 85), rgb(22, 22, 22));
-    font-family: 'Courier New', Courier, monospace;
 }
 
 /*? TÍTULO */
 h1 {
-    margin-top: 20px;
-    font-size: 1.5rem;
+    padding-top: 10px;
+    height: 70px;
+    font-size: 2rem;
     color: white;
     text-align: center;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-ul {
-    list-style: none;
+.title2 {
+    margin: 0 20px;
+    width: 35px;
+    height: 100%;
+}
+.title1 {
+    width: 130px;
+    height: 100%;
+}
+.title3 {
+    width: 120px;
+    height: 100%;
+}
+h1 > span {
+    font-size: 3rem;
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+h1 > span > div {
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-
-li {
-    letter-spacing: 5px;
-    transition: all 0.2s ease-in-out;
+.letter {
+    position: absolute;
 }
-
-li:hover {
-    filter: blur(50px);
-    opacity: 0;
+.l0 {
+    animation: moveLetter0 2s linear 1;
+    animation-fill-mode: forwards;
 }
-
+@keyframes moveLetter0 {
+    from {
+        transform: translate(200px, -20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l1 {
+    animation: moveLetter1 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter1 {
+    from {
+        transform: translate(220px, 50px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l2 {
+    animation: moveLetter2 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter2 {
+    from {
+        transform: translate(100px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l3 {
+    animation: moveLetter3 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter3 {
+    from {
+        transform: translate(300px, 15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l4 {
+    animation: moveLetter4 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter4 {
+    from {
+        transform: translate(100px, 25px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l5 {
+    animation: moveLetter5 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter5 {
+    from {
+        transform: translate(250px, -25px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l6 {
+    animation: moveLetter6 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter6 {
+    from {
+        transform: translate(-200px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l7 {
+    animation: moveLetter7 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter7 {
+    from {
+        transform: translate(-150px, -20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l8 {
+    animation: moveLetter8 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter8 {
+    from {
+        transform: translate(100px, -10px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l9 {
+    animation: moveLetter9 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter9 {
+    from {
+        transform: translate(-250px, 35px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l10 {
+    animation: moveLetter10 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter10 {
+    from {
+        transform: translate(-320px, 15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l11 {
+    animation: moveLetter11 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter11 {
+    from {
+        transform: translate(-200px, 10px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l12 {
+    animation: moveLetter12 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter12 {
+    from {
+        transform: translate(-250px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l13 {
+    animation: moveLetter13 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter13 {
+    from {
+        transform: translate(-320px, 25px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l14 {
+    animation: moveLetter14 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter14 {
+    from {
+        transform: translate(-250px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
 
 /*? CONTADOR DE JUGADAS, PUNTOS Y TIEMPO*/
 p {
@@ -268,7 +491,6 @@ button > span {
 .winTotalPoints {
     grid-area: 10 / 1 / 11 / 2;
 }
-
 .animacion-letras {
     animation: moverLetra 0.4s ease forwards;
     opacity: 0;
@@ -287,6 +509,9 @@ button > span {
         opacity: 1;
     }
 }
+
+
+
 
 
 
