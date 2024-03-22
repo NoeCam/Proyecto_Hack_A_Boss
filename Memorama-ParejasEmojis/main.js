@@ -80,6 +80,7 @@ const gameContainer = document.querySelector('.gameContainer');
 const title1 = document.querySelector('.title1');
 const title2 = document.querySelector('.title2');
 const title3 = document.querySelector('.title3');
+const getStorage = document.querySelector('.localStorage');
 
 //! función general para la creación de cartas con sus eventos
 //! lógica para tener 2 cartas con el mismo valor
@@ -376,14 +377,6 @@ function animatedTitle(){
       };
   });
 };
-animatedTitle();
-gameContainer.style.opacity = 0;
-winData.style.opacity = 0;
-setTimeout(() => {
-  gameContainer.style.opacity = 1;
-  printCards()
-  winData.style.opacity = 1;
-}, 2000)
 
 // Guardar la puntuación máxima en el localStorage
 function recolectData() {
@@ -416,6 +409,17 @@ function recolectData() {
 }
 
 
+animatedTitle();
+gameContainer.style.opacity = 0;
+winData.style.opacity = 0;
+getStorage.style.opacity = 0;
+getStorage.innerHTML = `Mejor puntuación: ${JSON.parse(localStorage.getItem('maxScore'))}`;
+setTimeout(() => {
+  gameContainer.style.opacity = 1;
+  printCards()
+  winData.style.opacity = 1;
+  getStorage.style.opacity = 1;
+}, 2000)
 
 
 
