@@ -385,3 +385,47 @@ setTimeout(() => {
   winData.style.opacity = 1;
 }, 2000)
 
+// Guardar la puntuación máxima en el localStorage
+function recolectData() {
+  resetTimer = true;
+  resetGameButton.setAttribute("disabled", true);
+  winData.style.display = "grid";
+  const winTotalPlays = document.querySelector(".winTotalPlays");
+  const totalPlaysEmoji = document.querySelector(".totalPlaysEmoji");
+  const winTotalTime = document.querySelector(".winTotalTime");
+  const totalTimeEmoji = document.querySelector(".totalTimeEmoji");
+  const winTotalPoints = document.querySelector(".winTotalPoints");
+  winTotalPlays.innerHTML = `Jugadas totales: ${playsCounter}`;
+  totalPlaysEmoji.innerHTML = `${puntuationPlaysEmojis[playsCounter]}`;
+  winTotalTime.innerHTML = `Tiempo total: 0${minCounter}:${Math.floor(
+    secondsCounter
+    )}`;
+  totalTimeEmoji.innerHTML = `${puntuationTimeEmojis[setTimePointsEmojis()]}`;
+  winTotalPoints.innerHTML = `Puntos obtenidos: ${
+    Number(pointsCounter) +
+    Number(givePoints()) +
+    Number(puntuationTimePoints[setTimePointsEmojis()])
+  }`;
+  const totalScore = Number(pointsCounter) +
+  Number(givePoints()) +
+  Number(puntuationTimePoints[setTimePointsEmojis()]);
+  const currentMaxScore = localStorage.getItem('maxScore');
+  if (!currentMaxScore || totalScore > currentMaxScore) {
+  localStorage.setItem('maxScore', totalScore);
+  };
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
