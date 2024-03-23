@@ -82,10 +82,6 @@ const title2 = document.querySelector('.title2');
 const title3 = document.querySelector('.title3');
 const getStorage = document.querySelector('.localStorage');
 
-//! función general para la creación de cartas con sus eventos
-//! lógica para tener 2 cartas con el mismo valor
-//! lógica para la comprobación de valores
-//! lógica para tener 2 cartas levantadas
 function printCards() {
   winData.style.display = "none";
   resetGameButton.removeAttribute("disabled");
@@ -119,7 +115,6 @@ function generateValues() {
   }
 }
 
-//! lógica para linkear los emojis a los valores
 function linkEmojis() {
   const allCardFronts = document.querySelectorAll(".cardFront");
 
@@ -144,7 +139,6 @@ async function flipCard(e) {
     flippedCards.push(currentCard);
     movesCounter++;
 
-    //! lógica para empezar a sumar segundos
     if (timerOnOff === false) {
       controlTimer();
     }
@@ -179,20 +173,19 @@ async function flipCard(e) {
         movesCounter = 0;
         allCards.forEach(card => card.style.pointerEvents = "");
       }, 1000);
+
       await setTimeout(() => {
         pointsInRealTime();
       }, 100)
     }
   }
 
-  //! lógica para mostrar el botón, length flippedCards
   const flippedCardList = document.querySelectorAll(".flipped");
   if (flippedCardList.length == totalCards) {
     recolectData();
   }
 }
 
-//! lógica para volver a jugar
 function playAgain() {
   newCards = [];
   newValues = [];
@@ -221,6 +214,7 @@ function resetGame() {
   playsCounter = 0;
   secondsCounter = 0;
   minCounter = 0;
+  pointsCounter = 0;
   resetTimer = true;
 
   const cardsToDelete = document.querySelectorAll(".game > div");
@@ -260,28 +254,33 @@ function controlTimer() {
 
 function memorize1sec() {
   const allCards = document.querySelectorAll(".card");
-
-  // Desactivar eventos
+  allCards.forEach((card) => card.classList.add("flipped"));
   allCards.forEach(card => card.style.pointerEvents = "none");
 
-  allCards.forEach((card) => card.classList.add("flipped"));
 
   setTimeout(() => {
-    allCards.forEach((card) => card.classList.remove("flipped"));
-
-    // Activar eventos después de 1 segundo
-    setTimeout(() => {
-      allCards.forEach((card) => card.style.pointerEvents = "");
-    }, 1000);
+    allCards.forEach(card => card.classList.remove("flipped"));
   }, 1000);
-}
 
+  setTimeout(() => {
+    allCards.forEach(card => card.style.pointerEvents = "");
+  }, 1100);
+}
 
 function givePoints() {
   if (playsCounter >= 21) {
     return puntuationPlaysPoints[21];
   } else {
     return puntuationPlaysPoints[playsCounter];
+  }
+}
+
+function setPlaysEmojis(){
+
+  if (playsCounter >= 21) {
+    return 21;
+  } else {
+    return playsCounter;
   }
 }
 
@@ -337,12 +336,8 @@ function pointsInRealTime(playResult) {
   if (pointsCounter <= 0){
     pointsCounter = 0;
 }
-totalPoints.innerHTML = `${pointsCounter}`;
-
-  
+  totalPoints.innerHTML = `${pointsCounter}`;
 }
-
-//! ANIMACIÓN TÍTULO:
 
 function animatedTitle(){
   const titleArray = Array.from(title1.innerHTML + title2.innerHTML + title3.innerHTML);
@@ -365,27 +360,35 @@ function animatedTitle(){
   });
 };
 
-// Guardar la puntuación máxima en el localStorage
 function recolectData() {
   resetTimer = true;
   resetGameButton.setAttribute("disabled", true);
   winData.style.display = "grid";
+
   const winTotalPlays = document.querySelector(".winTotalPlays");
   const totalPlaysEmoji = document.querySelector(".totalPlaysEmoji");
   const winTotalTime = document.querySelector(".winTotalTime");
   const totalTimeEmoji = document.querySelector(".totalTimeEmoji");
   const winTotalPoints = document.querySelector(".winTotalPoints");
+
   winTotalPlays.innerHTML = `Jugadas totales: ${playsCounter}`;
-  totalPlaysEmoji.innerHTML = `${puntuationPlaysEmojis[playsCounter]}`;
-  winTotalTime.innerHTML = `Tiempo total: 0${minCounter}:${Math.floor(
-    secondsCounter
+  totalPlaysEmoji.innerHTML = `${puntuationPlaysEmojis[setPlaysEmojis()]}`;
+  if (secondsCounter <= 9.5){
+    winTotalTime.innerHTML = `Tiempo total: 0${minCounter}:0${Math.floor(
+      secondsCounter
     )}`;
+  } else {
+    winTotalTime.innerHTML = `Tiempo total: 0${minCounter}:${Math.floor(
+      secondsCounter
+    )}`;
+  }
   totalTimeEmoji.innerHTML = `${puntuationTimeEmojis[setTimePointsEmojis()]}`;
   winTotalPoints.innerHTML = `Puntos obtenidos: ${
     Number(pointsCounter) +
     Number(givePoints()) +
     Number(puntuationTimePoints[setTimePointsEmojis()])
   }`;
+
   const totalScore = Number(pointsCounter) +
   Number(givePoints()) +
   Number(puntuationTimePoints[setTimePointsEmojis()]);
@@ -393,21 +396,33 @@ function recolectData() {
   if (!currentMaxScore || totalScore > currentMaxScore) {
   localStorage.setItem('maxScore', totalScore);
   };
+
   getStorage.innerHTML = `Mejor puntuación: ${localStorage.getItem('maxScore')}`;
 }
 
+function startGame(){
 
-animatedTitle();
-gameContainer.style.opacity = 0;
-winData.style.opacity = 0;
-getStorage.style.opacity = 0;
-getStorage.innerHTML = `Mejor puntuación: ${JSON.parse(localStorage.getItem('maxScore'))}`;
-setTimeout(() => {
-  gameContainer.style.opacity = 1;
-  printCards()
-  winData.style.opacity = 1;
-  getStorage.style.opacity = 1;
-}, 2000)
+  animatedTitle();
+
+  gameContainer.style.opacity = 0;
+  winData.style.opacity = 0;
+  getStorage.style.opacity = 0;
+
+  if (localStorage.getItem('maxScore')){
+    getStorage.innerHTML = `Mejor puntuación: ${JSON.parse(localStorage.getItem('maxScore'))}`;
+  } else {
+    getStorage.innerHTML = 'Mejor puntuación: 0';
+  }
+
+  setTimeout(() => {
+    gameContainer.style.opacity = 1;
+    printCards()
+    winData.style.opacity = 1;
+    getStorage.style.opacity = 1;
+  }, 2100);
+};
+
+startGame();
 
 
 

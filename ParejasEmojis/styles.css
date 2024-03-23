@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,6 @@ html {
     font-size: 62.5%;
     font-family: 'Courier New', Courier, monospace;
     height: 100vh;
-    width: 100vw;
 }
 
 
@@ -23,7 +22,6 @@ h1 {
     font-size: 2rem;
     color: white;
     text-align: center;
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +277,6 @@ p {
     padding: 2px;
 }
 
-/** row start / column start / row end / column end */
 .plays {
     grid-area: 2 / 2 / 3 / 3;
 }
@@ -291,20 +288,20 @@ p {
     grid-area: 4 / 2 / 5/ 3;
 }
 .totalPoints {
-    grid-area: 5 / 2/ 6 / 3;
+    grid-area: 5 / 2 / 6 / 3;
 }
 
 .time {
-    grid-area: 6 / 2/ 7 / 3;
+    grid-area: 6 / 2 / 7 / 3;
 }
 .totalTime {
-    grid-area: 7 / 2/ 8 / 3;
+    grid-area: 7 / 2 / 8 / 3;
 }
 
 /*? CONTENEDORES DE LAS CARTAS */
 main {
     width: 100vw;
-    height: calc(75vh - (1rem + 20px));
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,14 +312,12 @@ main {
     height: 75vh;
     border-radius: 10px;
     border: 1px solid rgb(148, 148, 148);
-    background-color: transparent; /* rgb(50, 50, 50) */
-    /* background: linear-gradient(to right, rgb(22, 22, 22), rgb(180, 180, 180)); */
+    background-color: transparent;
     display: grid;
     grid-template-columns: 0.25rem 10rem 0.25rem 1fr;
     grid-template-rows: repeat(9, 1fr);
     justify-content: center;
     align-items: center;
-    
 }
 
 .game {
@@ -359,18 +354,12 @@ main {
     align-items: center;
     backface-visibility: hidden;
     color: silver;
-    font-size: 100%;
 }
 
 .cardFront {
-    font-size: calc(10vh - 1.2em);
+    font-size: 100%;
     background: linear-gradient(to bottom, rgb(91, 163, 81), rgb(28, 66, 23));
     transform: rotateY(180deg);
-}
-
-.cardBack {
-    font-size: calc(10vh - 1.2em);
-    background: linear-gradient(to bottom, rgb(97, 97, 97), rgb(44, 44, 44));
 }
 
 .flipped {
@@ -409,7 +398,6 @@ button > span {
     display:flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .playAgain {
@@ -427,11 +415,8 @@ button > span {
     top: -25px;
     left: calc(-100% - 25px);
     z-index: 1;
-
-    /* border-top: 40px solid red; */
-    border-bottom: 27px solid #286cff; /* #286cff */
+    border-bottom: 27px solid #286cff;
     border-right: 27px solid transparent;
-    /* border-left: 40px solid yellow; */
 }
 
 .playAgain:hover::after {
@@ -442,7 +427,6 @@ button > span {
     width: 75px;
     height: 25px;
     grid-area: 8 / 2 / 9 / 3;
-    padding-top: 3px;
 }
 
 .resetGame::after {
@@ -452,13 +436,10 @@ button > span {
     transition: all 0.5s ease;
     position: absolute;
     top: -35px;
-    left: calc(-100% - 20px);
+    left: calc(-100% - 35px);
     z-index: 1;
-
-    /* border-top: 40px solid red; */
-    border-bottom: 20px solid #ff1e1e; /* #286cff */
-    border-right: 20px solid transparent;
-    /* border-left: 40px solid yellow; */
+    border-bottom: 35px solid #ff1e1e;
+    border-right: 35px solid transparent;
 }
 
 .resetGame:hover::after {
@@ -466,7 +447,6 @@ button > span {
 }
 
 .resetGame[disabled='true'] {
-    /* background-color: darkgray; */
     display: none;
 }
 
@@ -477,7 +457,6 @@ button > span {
     height: 250px;
     top: calc(50vh - (250px / 2));
     left: calc(50vw - (250px / 2));
-    
     background-color: rgba(44, 44, 44, 0.897);
     border: 1px solid white;
     border-radius: 7px;
@@ -506,25 +485,6 @@ button > span {
 .winTotalPoints {
     grid-area: 10 / 1 / 11 / 2;
 }
-.animacion-letras {
-    animation: moverLetra 0.4s ease forwards;
-    opacity: 0;
-    letter-spacing: 8px;
-   margin-top: 1.5rem;
-    
-}
-
-@keyframes moverLetra {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 
 /*? FOOTER */
 footer {
@@ -538,8 +498,8 @@ footer {
 }
 
   
-  #footer,
-  ul {
+#footer,
+ul {
     color: white; 
     font-size: 1.4rem;  
     list-style: none;
@@ -550,20 +510,20 @@ footer {
     margin-top: 10px;
   }
   
-  #footer,
-  li {
+#footer,
+li {
     color: white; 
     font-size: 1.4rem;
     letter-spacing: 3px;
     padding: 5px 20px 0 20px;
     transition: all 0.2s ease-in-out;
-  }
+}
   
-  #footer:hover,
-  li:hover {
+#footer:hover,
+li:hover {
     filter: blur(50px);
     opacity: 0;
-  }
+}
 
 
 /*? MediaQuery*/
