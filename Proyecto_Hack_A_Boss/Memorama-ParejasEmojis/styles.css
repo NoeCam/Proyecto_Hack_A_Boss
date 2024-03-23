@@ -1,0 +1,631 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+body {
+    background: linear-gradient(to bottom right, rgb(22, 22, 22), rgb(92, 85, 85), rgb(22, 22, 22));
+}
+
+/*? TÍTULO */
+h1 {
+    padding-top: 10px;
+    height: 70px;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title2 {
+    margin: 0 20px;
+    width: 35px;
+    height: 100%;
+}
+.title1 {
+    width: 130px;
+    height: 100%;
+}
+.title3 {
+    width: 120px;
+    height: 100%;
+}
+h1 > span {
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+h1 > span > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letter {
+    position: absolute;
+}
+.l0 {
+    animation: moveLetter0 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter0 {
+    from {
+        transform: translate(200px, -20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l1 {
+    animation: moveLetter1 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter1 {
+    from {
+        transform: translate(220px, 50px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l2 {
+    animation: moveLetter2 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter2 {
+    from {
+        transform: translate(100px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l3 {
+    animation: moveLetter3 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter3 {
+    from {
+        transform: translate(300px, 15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l4 {
+    animation: moveLetter4 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter4 {
+    from {
+        transform: translate(100px, 25px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l5 {
+    animation: moveLetter5 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter5 {
+    from {
+        transform: translate(250px, -25px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l6 {
+    animation: moveLetter6 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter6 {
+    from {
+        transform: translate(-200px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l7 {
+    animation: moveLetter7 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter7 {
+    from {
+        transform: translate(-150px, -20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l8 {
+    animation: moveLetter8 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter8 {
+    from {
+        transform: translate(100px, -10px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l9 {
+    animation: moveLetter9 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter9 {
+    from {
+        transform: translate(-250px, 35px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l10 {
+    animation: moveLetter10 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter10 {
+    from {
+        transform: translate(-320px, 15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l11 {
+    animation: moveLetter11 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter11 {
+    from {
+        transform: translate(-200px, 10px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l12 {
+    animation: moveLetter12 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter12 {
+    from {
+        transform: translate(-250px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l13 {
+    animation: moveLetter13 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter13 {
+    from {
+        transform: translate(-320px, 25px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.l14 {
+    animation: moveLetter14 2s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLetter14 {
+    from {
+        transform: translate(-250px, -15px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.localStorage {
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
+}
+/*? CONTADOR DE JUGADAS, PUNTOS Y TIEMPO*/
+p {
+    font-size: 1.6rem;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+
+/** row start / column start / row end / column end */
+.plays {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.totalPlays {
+    grid-area: 3 / 2 / 4/ 3;
+}
+
+.points {
+    grid-area: 4 / 2 / 5/ 3;
+}
+.totalPoints {
+    grid-area: 5 / 2/ 6 / 3;
+}
+
+.time {
+    grid-area: 6 / 2/ 7 / 3;
+}
+.totalTime {
+    grid-area: 7 / 2/ 8 / 3;
+}
+
+/*? CONTENEDORES DE LAS CARTAS */
+main {
+    width: 100vw;
+    height: calc(75vh - (1rem + 20px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContainer {
+    width: 98vw;
+    height: 75vh;
+    border-radius: 10px;
+    border: 1px solid rgb(148, 148, 148);
+    background-color: transparent; /* rgb(50, 50, 50) */
+    /* background: linear-gradient(to right, rgb(22, 22, 22), rgb(180, 180, 180)); */
+    display: grid;
+    grid-template-columns: 0.25rem 10rem 0.25rem 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.game {
+    margin: 0.2rem 0.3rem;
+    width: 95%;
+    height: calc(95% - 1rem - 12px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    grid-area: 1 / 4 / 10 / 7;
+}
+
+
+/*? CARTAS */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 7px;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.cardFront,
+.cardBack {
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(170, 170, 170);
+    border-radius: 7px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    color: silver;
+    font-size: 100%;
+}
+
+.cardFront {
+    font-size: calc(10vh - 1.2em);
+    background: linear-gradient(to bottom, rgb(91, 163, 81), rgb(28, 66, 23));
+    transform: rotateY(180deg);
+}
+
+.cardBack {
+    font-size: calc(10vh - 1.2em);
+    background: linear-gradient(to bottom, rgb(97, 97, 97), rgb(44, 44, 44));
+}
+
+.flipped {
+    transform: rotateY(180deg);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 4px 4px 8px black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    background-size:contain;
+    display: block;
+  }  
+
+/*? BOTONES */
+button {
+    font-size: 1.6rem;
+    margin: auto auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button > span {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.playAgain {
+    width: 140px;
+    height: 25px;
+    grid-area: 12 / 1 / 13 / 2;
+}
+
+.playAgain::after {
+    content: "";
+    width: 140px;
+    height: 25px;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: -25px;
+    left: calc(-100% - 25px);
+    z-index: 1;
+
+    /* border-top: 40px solid red; */
+    border-bottom: 27px solid #286cff; /* #286cff */
+    border-right: 27px solid transparent;
+    /* border-left: 40px solid yellow; */
+}
+
+.playAgain:hover::after {
+    left: 0;
+}
+
+.resetGame {
+    width: 75px;
+    height: 25px;
+    grid-area: 8 / 2 / 9 / 3;
+    padding-top: 3px;
+}
+
+.resetGame::after {
+    content: "";
+    width: 75px;
+    height: 27px;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: -35px;
+    left: calc(-100% - 20px);
+    z-index: 1;
+
+    /* border-top: 40px solid red; */
+    border-bottom: 20px solid #ff1e1e; /* #286cff */
+    border-right: 20px solid transparent;
+    /* border-left: 40px solid yellow; */
+}
+
+.resetGame:hover::after {
+    left: 0;
+}
+
+.resetGame[disabled='true'] {
+    /* background-color: darkgray; */
+    display: none;
+}
+
+/*? RECOLECCIÓN/RESUMEN DE LA DATA AL GANAR */
+.winData {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: calc(50vh - (250px / 2));
+    left: calc(50vw - (250px / 2));
+    
+    background-color: rgba(44, 44, 44, 0.897);
+    border: 1px solid white;
+    border-radius: 7px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5px repeat(6, 1fr 5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.winTotalPlays {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.totalPlaysEmoji {
+    grid-area: 4 / 1 / 5 / 2
+}
+
+.winTotalTime {
+    grid-area: 6 / 1 / 7 / 2;
+}
+
+.totalTimeEmoji {
+    grid-area: 8 / 1 / 9 / 2;
+}
+
+.winTotalPoints {
+    grid-area: 10 / 1 / 11 / 2;
+}
+.animacion-letras {
+    animation: moverLetra 0.4s ease forwards;
+    opacity: 0;
+    letter-spacing: 8px;
+   margin-top: 1.5rem;
+    
+}
+
+@keyframes moverLetra {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*? FOOTER */
+footer {
+    height: calc(24vh - 12.6rem);  
+    margin-top: 1.5rem;
+  }
+
+  footer > p {
+    width: 45rem;
+    margin: auto auto;
+}
+
+  
+  #footer,
+  ul {
+    color: white; 
+    font-size: 1.4rem;  
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  #footer,
+  li {
+    color: white; 
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    padding: 5px 20px 0 20px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #footer:hover,
+  li:hover {
+    filter: blur(50px);
+    opacity: 0;
+  }
+
+
+/*? MediaQuery*/
+@media screen and (min-width: 320px) and (min-height: 320px){
+    .cardFront {
+        font-size: 250%;
+    }
+}
+@media screen and (min-width: 500px) and (min-height: 500px){
+    .cardFront {
+        font-size: 500%;
+    }
+}
+@media screen and (min-width: 750px) and (min-height: 750px) {
+    .cardFront {
+        font-size: 750%;
+    }
+}
+@media screen and (min-width: 1000px) and (min-height: 1000px){
+    .cardFront {
+        font-size: 1000%;
+    }
+}
+@media screen and (min-width: 1000px){
+    .gameContainer {
+        width: 80vw;
+        grid-template-columns: 0.5rem 15rem 0.5rem 1fr;
+    }
+    p{
+        font-size: 2.4rem;
+    }
+    .winData {
+        width: 40rem;
+        height: 45rem;
+        top: calc(50vh - (45rem / 2));
+        left: calc(50vw - (40rem / 2));
+    }
+    button {
+        font-size: 2.4rem;
+    }
+    .playAgain {
+        width: 22rem;
+        height: 3.2rem;
+    }
+    .playAgain::after {
+        width: 22rem;
+        height: 3.4rem;
+        top: -3.4rem;
+        left: calc(-100% - 3.4rem);
+        border-bottom: 3.4rem solid #286cff;
+        border-right: 3.4rem solid transparent;
+    }
+    .resetGame {
+        width: 10rem;
+        height: 3.2rem;
+    }
+    .resetGame::after {
+        width: 10rem;
+        height: 3.4rem;
+        top: -3.4rem;
+        left: calc(-100% - 3.4rem);
+        border-bottom: 3.4rem solid #ff1e1e;
+        border-right: 3.4rem solid transparent;
+    }
+}
